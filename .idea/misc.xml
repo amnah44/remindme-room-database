@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/HDD 2020/Android Project/remindme-room-database/app/src/main/res/drawable/rounded_corner_view.xml" value="0.3828125" />
+        <entry key="..\:/HDD 2020/Android Project/remindme-room-database/app/src/main/res/layout/fragment_intake.xml" value="0.25" />
         <entry key="..\:/HDD 2020/Android Project/remindme-room-database/app/src/main/res/layout/item_drug.xml" value="0.33" />
         <entry key="..\:/HDD 2020/Android Project/remindme-room-database/app/src/main/res/layout/item_search.xml" value="0.33" />
       </map>

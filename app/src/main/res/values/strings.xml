@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Remind me</string>
+    <string name="schedule_the_dose">Schedule The Dose</string>
+    <string name="pills_name">Pills Name</string>
+    <string name="amount">Amount</string>
+    <string name="dose">Dose</string>
+    <string name="frequency">Frequency</string>
+    <string name="remainder">Remainder</string>
+    <string name="in_case_you_missed_your_dose">In case You missed Your Dose</string>
+    <string name="phone">Phone</string>
 </resources>
