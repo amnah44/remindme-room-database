@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,170 +21,157 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/lbl1"
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pillsName1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/large_margin"
             android:fontFamily="@font/roboto_regular"
             android:text="@string/pills_name"
+            android:hint="@string/pills_name"
             android:textColor="@color/app_txt_color"
             android:textSize="@dimen/txt4"
-            app:layout_constraintStart_toStartOf="@+id/pillsName"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-        <EditText
-            android:id="@+id/pillsName"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:background="@drawable/rounded_corner_view"
-            android:drawableStart="@drawable/ic_capsule"
-            android:drawableLeft="@drawable/ic_capsule"
-            android:fontFamily="@font/podkova_regular"
-            android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lbl1"
-            app:layout_constraintWidth_percent="0.9" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintWidth_percent="0.9"
+            app:startIconDrawable="@drawable/ic_capsule"
+            app:startIconTint="@color/app_txt_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pillsName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/app_txt_color"
+                android:background="@drawable/rounded_corner_view"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-        <TextView
-            android:id="@+id/lbl2"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/amount1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
             android:fontFamily="@font/roboto_regular"
-            android:text="@string/amount"
+            android:hint="@string/amount"
             android:textColor="@color/app_txt_color"
             android:textSize="@dimen/txt4"
-            app:layout_constraintStart_toStartOf="@+id/pillsName"
-            app:layout_constraintTop_toBottomOf="@+id/pillsName" />
+            app:layout_constraintStart_toStartOf="@+id/pillsName1"
+            app:layout_constraintTop_toBottomOf="@+id/pillsName1"
+            app:layout_constraintWidth_percent="0.43"
+            app:startIconDrawable="@drawable/ic_capsule"
+            app:startIconTint="@color/app_txt_color">
 
-        <EditText
-            android:id="@+id/amount"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:background="@drawable/rounded_corner_view"
-            android:drawableStart="@drawable/ic_capsule"
-            android:drawableLeft="@drawable/ic_capsule"
-            android:fontFamily="@font/podkova_regular"
-            android:padding="10dp"
-            app:layout_constraintStart_toStartOf="@+id/lbl2"
-            app:layout_constraintTop_toBottomOf="@+id/lbl2"
-            app:layout_constraintWidth_percent="0.43" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corner_view"
+                android:textColor="@color/app_txt_color" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/lbl3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_regular"
-            android:text="@string/dose"
-            android:textColor="@color/app_txt_color"
-            android:textSize="@dimen/txt4"
-            app:layout_constraintStart_toStartOf="@+id/dose"
-            app:layout_constraintTop_toTopOf="@+id/lbl2" />
-
-        <EditText
-            android:id="@+id/dose"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:background="@drawable/rounded_corner_view"
-            android:drawableStart="@drawable/ic_capsule"
-            android:drawableLeft="@drawable/ic_capsule"
-            android:fontFamily="@font/podkova_regular"
-            android:padding="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/pillsName"
-            app:layout_constraintTop_toBottomOf="@+id/lbl2"
-            app:layout_constraintWidth_percent="0.43" />
-
-
-        <TextView
-            android:id="@+id/lbl4"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dose1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
             android:fontFamily="@font/roboto_regular"
-            android:text="@string/frequency"
+            android:hint="@string/dose"
             android:textColor="@color/app_txt_color"
             android:textSize="@dimen/txt4"
-            app:layout_constraintStart_toStartOf="@+id/pillsName"
-            app:layout_constraintTop_toBottomOf="@+id/amount" />
+            app:layout_constraintEnd_toEndOf="@+id/pillsName1"
+            app:layout_constraintTop_toBottomOf="@+id/pillsName1"
+            app:layout_constraintWidth_percent="0.43"
+            app:startIconDrawable="@drawable/ic_capsule"
+            app:startIconTint="@color/app_txt_color">
 
-        <EditText
-            android:id="@+id/frequency"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dose"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corner_view"
+                android:textColor="@color/app_txt_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/frequency1"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
             android:background="@drawable/rounded_corner_view"
-            android:drawableStart="@drawable/ic_calender"
-            android:drawableLeft="@drawable/ic_calender"
             android:fontFamily="@font/podkova_regular"
-            android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lbl4"
-            app:layout_constraintWidth_percent="0.9" />
+            app:layout_constraintTop_toBottomOf="@+id/amount1"
+            app:layout_constraintWidth_percent="0.9"
+            app:startIconDrawable="@drawable/ic_calender"
+            android:hint="@string/frequency"
+            app:startIconTint="@color/app_txt_color">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/frequency"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corner_view"
+                android:textColor="@color/app_txt_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/lbl5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:fontFamily="@font/roboto_regular"
-            android:text="@string/remainder"
-            android:textColor="@color/app_txt_color"
-            android:textSize="@dimen/txt4"
-            app:layout_constraintStart_toStartOf="@+id/pillsName"
-            app:layout_constraintTop_toBottomOf="@+id/frequency" />
-
-        <EditText
-            android:id="@+id/reminder"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/reminder1"
             android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_marginTop="@dimen/medium_margin"
             android:background="@drawable/rounded_corner_view"
-            android:drawableStart="@drawable/ic_notification"
-            android:drawableLeft="@drawable/ic_notification"
             android:fontFamily="@font/podkova_regular"
-            android:padding="10dp"
-            app:layout_constraintStart_toStartOf="@+id/frequency"
-            app:layout_constraintTop_toBottomOf="@+id/lbl5"
-            app:layout_constraintWidth_percent="0.75" />
+            app:layout_constraintStart_toStartOf="@+id/frequency1"
+            app:layout_constraintTop_toBottomOf="@+id/frequency1"
+            app:layout_constraintWidth_percent="0.75"
+            app:startIconDrawable="@drawable/ic_notification"
+            android:hint="@string/remainder"
+            app:startIconTint="@color/app_txt_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/reminder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corner_view"
+                android:textColor="@color/app_txt_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:layout_constraintEnd_toEndOf="@+id/frequency"
-            app:layout_constraintTop_toTopOf="@+id/reminder"
+            app:layout_constraintEnd_toEndOf="@+id/frequency1"
+            app:layout_constraintTop_toTopOf="@+id/reminder1"
             android:background="@color/app_txt_color"
             android:textColor="@color/white"
             android:text="+"/>
 
 
-        <TextView
-            android:id="@+id/lbl6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:fontFamily="@font/roboto_regular"
-            android:text="@string/phone"
-            android:textColor="@color/app_txt_color"
-            android:textSize="@dimen/txt4"
-            app:layout_constraintStart_toStartOf="@+id/pillsName"
-            app:layout_constraintTop_toBottomOf="@+id/reminder" />
-
-        <EditText
-            android:id="@+id/phone"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone1"
             android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_marginTop="@dimen/medium_margin"
             android:background="@drawable/rounded_corner_view"
-            android:drawableStart="@drawable/ic_phone"
-            android:drawableLeft="@drawable/ic_phone"
             android:fontFamily="@font/podkova_regular"
-            android:padding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lbl6"
-            app:layout_constraintWidth_percent="0.9" />
+            app:layout_constraintTop_toBottomOf="@+id/reminder1"
+            app:layout_constraintWidth_percent="0.9"
+            app:startIconDrawable="@drawable/ic_phone"
+            android:hint="@string/remainder"
+            app:startIconTint="@color/app_txt_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corner_view"
+                android:textColor="@color/app_txt_color"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/lbl7"
@@ -196,7 +182,7 @@
             android:text="@string/in_case_you_missed_your_dose"
             android:textColor="@color/app_txt_color"
             android:textSize="@dimen/txt4"
-            app:layout_constraintStart_toStartOf="@+id/pillsName"
-            app:layout_constraintTop_toBottomOf="@+id/phone" />
+            app:layout_constraintStart_toStartOf="@+id/pillsName1"
+            app:layout_constraintTop_toBottomOf="@+id/phone1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
