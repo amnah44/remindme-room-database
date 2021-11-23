@@ -1,9 +1,6 @@
 package com.graps.remindme.data.database
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Update
+import androidx.room.*
 import com.graps.remindme.data.Reminder
 
 @Dao
@@ -17,4 +14,7 @@ interface ReminderDao {
 
     @Delete
     fun deleteReminder(reminder:Reminder)
+
+    @Query("SELECT * FROM Reminder_table")
+    fun getAllReminder():List<Reminder>
 }
