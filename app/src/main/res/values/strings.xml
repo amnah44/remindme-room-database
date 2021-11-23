@@ -8,4 +8,6 @@
     <string name="remainder">Remainder</string>
     <string name="in_case_you_missed_your_dose">In case You missed Your Dose</string>
     <string name="phone">Phone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

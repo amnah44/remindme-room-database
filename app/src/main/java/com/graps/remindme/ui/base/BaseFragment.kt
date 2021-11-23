@@ -1,4 +1,4 @@
-package com.graps.remindme
+package com.graps.remindme.ui.base
 
 
 import android.os.Bundle
@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
 
 abstract class BaseFragment<VDB : ViewDataBinding>(private val fragmentLayoutId: Int) : Fragment() {
 
-    abstract val viewModel: BaseViewModel
+    abstract val viewModel: ViewModel
+//            BaseViewModel
 
     private lateinit var _binding: VDB
     val binding: VDB get() = _binding
@@ -22,7 +24,7 @@ abstract class BaseFragment<VDB : ViewDataBinding>(private val fragmentLayoutId:
         savedInstanceState: Bundle?
     ): View? {
         _binding = bindingInflater(inflater, fragmentLayoutId, container, false)
-        _binding.setVariable(BR.viewModel, viewModel)
+//        _binding.setVariable(BR.viewModel, viewModel)
         _binding.lifecycleOwner = this
         return binding.root
     }
