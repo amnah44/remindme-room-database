@@ -7,7 +7,6 @@ import io.reactivex.rxjava3.core.Observable
 
 @Dao
 interface ReminderDao {
-
     @Insert
     fun insertReminder(reminder:Reminder):Completable
 
