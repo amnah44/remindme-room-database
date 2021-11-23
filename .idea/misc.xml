@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Remindme/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Remindme/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Remindme/app/src/main/res/layout/fragment_intake.xml" value="0.20416666666666666" />
         <entry key="..\:/Remindme/app/src/main/res/layout/item_drug.xml" value="0.20416666666666666" />
       </map>

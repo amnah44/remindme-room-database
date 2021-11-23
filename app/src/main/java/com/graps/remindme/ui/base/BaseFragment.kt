@@ -11,8 +11,7 @@ import androidx.lifecycle.ViewModel
 
 abstract class BaseFragment<VDB : ViewDataBinding>(private val fragmentLayoutId: Int) : Fragment() {
 
-    abstract val viewModel: ViewModel
-//            BaseViewModel
+    abstract val viewModel: BaseViewModel
 
     private lateinit var _binding: VDB
     val binding: VDB get() = _binding

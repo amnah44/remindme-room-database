@@ -5,15 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModel
 import com.graps.remindme.R
+import com.graps.remindme.databinding.FragmentHomeBinding
+import com.graps.remindme.ui.base.BaseFragment
 
-class HomeFragment : Fragment() {
+class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
+    override val viewModel: ViewModel
+        get() = TODO("Not yet implemented")
+    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) ->
+    FragmentHomeBinding = DataBindingUtil::inflate
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    override fun setupView() {
+
     }
+
 }
