@@ -5,7 +5,6 @@ import com.graps.remindme.data.Reminder
 
 @Dao
 interface ReminderDao {
-
     @Insert
     fun insertReminder(reminder:Reminder)
 
