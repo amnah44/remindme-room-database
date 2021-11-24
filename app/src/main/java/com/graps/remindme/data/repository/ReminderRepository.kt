@@ -10,4 +10,9 @@ class ReminderRepository {
     fun insertReminder(reminder: Reminder): Completable{
         return dao.insertReminder(reminder)
     }
+
+    fun deleteReminder(reminder: Reminder): Completable{
+        return dao.deleteReminder(reminder)
+    }
+
 }
