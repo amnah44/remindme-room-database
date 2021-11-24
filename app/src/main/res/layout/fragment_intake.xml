@@ -3,12 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white">
-
 
         <TextView
             android:id="@+id/textView2"
@@ -151,12 +149,12 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@color/app_txt_color"
             android:text="+"
+            android:textSize="@dimen/txt6"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/frequency"
-            app:layout_constraintTop_toTopOf="@+id/reminder" />
-
+            app:layout_constraintTop_toTopOf="@+id/reminder"
+            android:background="@drawable/rounded_corner_btn"/>
 
         <TextView
             android:id="@+id/lbl6"
@@ -257,7 +255,7 @@
             app:cardCornerRadius="50dp"
             app:layout_constraintDimensionRatio="H,50:50"
             app:layout_constraintEnd_toEndOf="@+id/phone"
-            app:layout_constraintStart_toEndOf="cardView"
+
             app:layout_constraintTop_toBottomOf="@+id/lbl8"
             app:layout_constraintWidth_percent="0.21">
 
