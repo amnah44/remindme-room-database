@@ -147,6 +147,7 @@
             app:layout_constraintWidth_percent="0.75" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/date_picker_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:text="+"
