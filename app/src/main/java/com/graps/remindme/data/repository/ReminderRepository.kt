@@ -7,19 +7,15 @@ import io.reactivex.rxjava3.core.Completable
 class ReminderRepository {
     val dao = ReminderDatabase.getInstanceWithoutContext().reminderDao()
 
-    fun insertReminder(reminder: Reminder): Completable{
-        return dao.insertReminder(reminder)
-    }
+    fun insertReminder(reminder: Reminder) =
+        dao.insertReminder(reminder)
 
-    fun deleteReminder(reminder: Reminder): Completable{
-        return dao.deleteReminder(reminder)
-    }
+    fun deleteReminder(reminder: Reminder) =
+        dao.deleteReminder(reminder)
 
-    fun updateReminder(reminder: Reminder): Completable{
-        return dao.updateReminder(reminder)
-    }
+    fun updateReminder(reminder: Reminder) =
+        dao.updateReminder(reminder)
 
-    fun retrieveRemindersDependingOnDate(year :String,month:String,day:String) =
-        dao.getFilteredReminders("$year","$month","$day")
-
+    fun retrieveRemindersDependingOnDate(year: String, month: String, day: String) =
+        dao.getFilteredReminders("$year", "$month", "$day")
 }
