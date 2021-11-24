@@ -18,4 +18,11 @@ interface ReminderDao {
 
     @Query("SELECT * FROM Reminder_table")
     fun getAllReminder():Observable<List<Reminder>>
+
+    @Query("SELECT * FROM Reminder_table WHERE Year = :year and Month = :month and Day = :day")
+    fun getFilteredReminders(
+        year :String,
+        month:String,
+        day:String,
+    )
 }
