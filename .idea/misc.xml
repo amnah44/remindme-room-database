@@ -5,8 +5,9 @@
       <map>
         <entry key="app/src/main/res/drawable/rounded_corner_view.xml" value="0.2984375" />
         <entry key="app/src/main/res/layout/activity_remind_me.xml" value="0.13728470111448834" />
+        <entry key="app/src/main/res/layout/date_picker_dialog.xml" value="0.35052083333333334" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.13728470111448834" />
-        <entry key="app/src/main/res/layout/fragment_intake.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_intake.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_drug.xml" value="0.13728470111448834" />
       </map>
     </option>
