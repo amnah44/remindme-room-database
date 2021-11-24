@@ -9,6 +9,5 @@ class RemindMeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_remind_me)
-        ReminderDatabase.getInstance(applicationContext)
     }
 }
