@@ -22,6 +22,10 @@ abstract class ReminderDatabase : RoomDatabase() {
         return instance?: synchronized(this){ buildDatabase(context).also { instance = it }}
         }
 
+        fun getInstanceWithoutContext(): ReminderDatabase{
+            return instance!!
+        }
+
         private fun buildDatabase(context: Context): ReminderDatabase{
          return Room.databaseBuilder(context, ReminderDatabase::class.java, Database_Name).build()
         }
