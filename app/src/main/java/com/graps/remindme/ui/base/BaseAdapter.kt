@@ -1,10 +1,13 @@
 package com.graps.remindme.ui.base
 
+import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.databinding.library.baseAdapters.BR
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 
@@ -39,8 +42,10 @@ abstract class BaseAdapter<T>(private var items: List<T>, private val listener:B
     fun getItems() = items
 
     fun setItems(newItems: List<T>) {
+        val reminderDiffutils = DiffUtil.calculateDiff(ReminderDiffutils(items, newItems))
         items = newItems
-        }
+        reminderDiffutils.dispatchUpdatesTo(this)
+    }
 
     class ItemViewHolder(val binding: ViewDataBinding) : BaseViewHolder(binding)
 
