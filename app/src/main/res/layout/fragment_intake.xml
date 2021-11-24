@@ -187,6 +187,7 @@
             app:layout_constraintTop_toBottomOf="@+id/lbl6"
             app:layout_constraintWidth_percent="0.9" />
 
+
         <TextView
             android:id="@+id/lbl7"
             android:layout_width="0dp"
