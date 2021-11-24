@@ -1,4 +1,4 @@
-package com.graps.remindme
+package com.graps.remindme.ui.base
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -44,6 +44,6 @@ abstract class BaseAdapter<T>(private var items: List<T>, private val listener:B
 
     abstract class BaseViewHolder(binding : ViewDataBinding) : RecyclerView.ViewHolder(binding.root)
 
+    interface BaseInteractionListener
 }
 
-interface BaseInteractionListener
