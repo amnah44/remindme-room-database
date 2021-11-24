@@ -18,4 +18,8 @@ class ReminderRepository {
     fun updateReminder(reminder: Reminder): Completable{
         return dao.updateReminder(reminder)
     }
+
+    fun retrieveRemindersDependingOnDate(year :String,month:String,day:String) =
+        dao.getFilteredReminders("$year","$month","$day")
+
 }
