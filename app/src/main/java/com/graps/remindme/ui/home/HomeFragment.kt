@@ -21,7 +21,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             setInitialDate(2021,11,24)
             setOnDateSelectedListener(object : OnDateSelectedListener{
                 override fun onDateSelected(year: Int, month: Int, day: Int, dayOfWeek: Int) {
-
+                    viewModel.getDate(year, month, day)
                 }
 
                 override fun onDisabledDateSelected(
