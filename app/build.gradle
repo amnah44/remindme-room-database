@@ -79,7 +79,6 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-rxjava3:$room_version"
 
-//    //material implementation
-//    def material_version = "1.4.0"
-//    implementation "com.google.android.material:$material_version"
+    //date picker implementation
+    implementation 'com.github.badoualy:datepicker-timeline:c6dcd05737'
 }
