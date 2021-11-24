@@ -149,6 +149,7 @@
             app:layout_constraintWidth_percent="0.75" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/date_picker_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/app_txt_color"
@@ -156,7 +157,6 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/frequency"
             app:layout_constraintTop_toTopOf="@+id/reminder" />
-
 
         <TextView
             android:id="@+id/lbl6"
@@ -263,9 +263,7 @@
             app:cardBackgroundColor="@color/app_color"
             app:cardCornerRadius="50dp"
             app:layout_constraintDimensionRatio="H,50:50"
-
             app:layout_constraintEnd_toEndOf="@+id/phone"
-            app:layout_constraintStart_toEndOf="cardView"
             app:layout_constraintTop_toBottomOf="@+id/lbl8"
             app:layout_constraintWidth_percent="0.21">
 
@@ -353,7 +351,7 @@
             app:layout_constraintDimensionRatio="H,50:50"
 
             app:layout_constraintEnd_toStartOf="@+id/cardView3"
-            app:layout_constraintStart_toEndOf="@+id/cardView"
+
             app:layout_constraintTop_toTopOf="@+id/cardView1"
             app:layout_constraintWidth_percent="0.21"
             >
