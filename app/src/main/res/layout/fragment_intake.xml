@@ -183,7 +183,6 @@
             app:layout_constraintTop_toBottomOf="@+id/lbl6"
             app:layout_constraintWidth_percent="0.9" />
 
-
         <TextView
             android:id="@+id/lbl7"
             android:layout_width="0dp"
@@ -195,7 +194,6 @@
             android:textSize="@dimen/txt4"
             app:layout_constraintStart_toStartOf="@+id/pillsName"
             app:layout_constraintTop_toBottomOf="@+id/phone" />
-
 
         <TextView
             android:id="@+id/lbl8"
@@ -209,184 +207,162 @@
             app:layout_constraintStart_toStartOf="@+id/pillsName"
             app:layout_constraintTop_toBottomOf="@+id/lbl7" />
 
-
-        <androidx.cardview.widget.CardView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cardView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="0dp"
+            android:background="@drawable/circle_view"
             app:cardBackgroundColor="@color/app_color"
             app:cardCornerRadius="50dp"
             app:layout_constraintDimensionRatio="H,50:50"
             app:layout_constraintStart_toStartOf="@+id/lbl8"
             app:layout_constraintTop_toBottomOf="@+id/lbl8"
-            app:layout_constraintWidth_percent="0.21"
-            app:layout_constraintTop_toTopOf="@+id/cardView1">
+            app:layout_constraintTop_toTopOf="@+id/cardView1"
+            app:layout_constraintWidth_percent="0.21">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/small_margin"
+                android:src="@drawable/ic_tablets"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:fontFamily="@font/podkova_bold"
+                android:textAlignment="center"
+                android:textColor="@color/app_txt_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:text="Tablets" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="@dimen/small_margin"
-                    android:src="@drawable/ic_tablets"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="@dimen/small_margin"
-                    android:fontFamily="@font/podkova_bold"
-                    android:textAlignment="center"
-                    android:textColor="@color/app_txt_color"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView"
-                    tools:text="Tablets" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cardView1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="21dp"
             android:layout_marginTop="@dimen/medium_margin"
+            android:background="@drawable/circle_view"
             app:cardBackgroundColor="@color/app_color"
             app:cardCornerRadius="50dp"
             app:layout_constraintDimensionRatio="H,50:50"
-
             app:layout_constraintEnd_toEndOf="@+id/phone"
             app:layout_constraintStart_toEndOf="cardView"
             app:layout_constraintTop_toBottomOf="@+id/lbl8"
             app:layout_constraintWidth_percent="0.21">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/small_margin"
+                android:src="@drawable/ic_spray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:fontFamily="@font/podkova_bold"
+                android:text="@string/spray"
+                android:textAlignment="center"
+                android:textColor="@color/app_txt_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/imageView1"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="@dimen/small_margin"
-                    android:src="@drawable/ic_spray"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="@dimen/small_margin"
-                    android:fontFamily="@font/podkova_bold"
-                    android:text="@string/spray"
-                    android:textAlignment="center"
-                    android:textColor="@color/app_txt_color"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView1" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cardView3"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="@dimen/small_margin"
+            android:background="@drawable/circle_view"
             app:cardBackgroundColor="@color/app_color"
             app:cardCornerRadius="50dp"
             app:layout_constraintDimensionRatio="H,50:50"
             app:layout_constraintEnd_toStartOf="@+id/cardView1"
-            app:layout_constraintWidth_percent="0.21"
-            app:layout_constraintTop_toTopOf="@+id/cardView1">
+            app:layout_constraintTop_toTopOf="@+id/cardView1"
+            app:layout_constraintWidth_percent="0.21">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/small_margin"
+                android:src="@drawable/ic_capsule1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:fontFamily="@font/podkova_bold"
+                android:text="@string/capsule"
+                android:textAlignment="center"
+                android:textColor="@color/app_txt_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="@dimen/small_margin"
-                    android:src="@drawable/ic_capsule1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="@dimen/small_margin"
-                    android:fontFamily="@font/podkova_bold"
-                    android:text="@string/capsule"
-                    android:textAlignment="center"
-                    android:textColor="@color/app_txt_color"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView4"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="0dp"
+            android:background="@drawable/circle_view"
             app:cardBackgroundColor="@color/app_color"
             app:cardCornerRadius="50dp"
             app:layout_constraintDimensionRatio="H,50:50"
-
             app:layout_constraintEnd_toStartOf="@+id/cardView3"
             app:layout_constraintStart_toEndOf="@+id/cardView"
             app:layout_constraintTop_toTopOf="@+id/cardView1"
-            app:layout_constraintWidth_percent="0.21"
-            >
+            app:layout_constraintWidth_percent="0.21">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/small_margin"
+                android:src="@drawable/ic_injection"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="@dimen/small_margin"
+                android:fontFamily="@font/podkova_bold"
+                android:text="@string/injection"
+                android:textAlignment="center"
+                android:textColor="@color/app_txt_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="@dimen/small_margin"
-                    android:src="@drawable/ic_injection"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="@dimen/small_margin"
-                    android:fontFamily="@font/podkova_bold"
-                    android:text="@string/injection"
-                    android:textAlignment="center"
-                    android:textColor="@color/app_txt_color"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button"
