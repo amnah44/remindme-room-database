@@ -2,7 +2,7 @@ package com.graps.remindme.ui.base
 
 import androidx.recyclerview.widget.DiffUtil
 
-class BaseDiffutils<T>(private val remindersList: List<T>, private val remindersNewList: List<T>) :
+class ReminderDiffutils<T>(private val remindersList: List<T>, private val remindersNewList: List<T>) :
     DiffUtil.Callback() {
         override fun getOldListSize() = remindersList.size
 
