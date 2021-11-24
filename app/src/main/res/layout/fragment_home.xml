@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.graps.remindme.ui.home.HomeViewModel" />
@@ -30,16 +31,16 @@
             android:id="@+id/to_take_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To take"
-            android:textSize="@dimen/txt6"
-            android:fontFamily="@font/podkova_bold"
-            android:textColor="@color/app_txt_color"
+            android:layout_marginStart="@dimen/medium_margin"
             android:layout_marginTop="@dimen/medium_margin"
             android:layout_marginBottom="@dimen/small_margin"
-            android:layout_marginStart="@dimen/medium_margin"
+            android:fontFamily="@font/podkova_bold"
+            android:text="To take"
+            android:textColor="@color/app_txt_color"
+            android:textSize="@dimen/txt6"
             app:layout_constraintBottom_toTopOf="@id/reminder_recycler"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/datePickerTimeline"/>
+            app:layout_constraintTop_toBottomOf="@id/datePickerTimeline" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/reminder_recycler"
@@ -47,11 +48,11 @@
             android:layout_height="0dp"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/to_take_txt"
-            tools:listitem="@layout/item_drug"/>
+            tools:listitem="@layout/item_drug" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

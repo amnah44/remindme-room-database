@@ -17,9 +17,9 @@ abstract class BaseViewModel : ViewModel() {
 
     fun <T> observe(
         observable: Observable<T>,
-        onComplete:(T) -> Unit,
+        onComplete: (T) -> Unit,
         onError: (Throwable) -> Unit
-    ){
+    ) {
         observable
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
