@@ -2,10 +2,10 @@ package com.graps.remindme.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import com.graps.remindme.R
+import com.graps.remindme.data.database.ReminderDatabase
 import com.graps.remindme.databinding.FragmentHomeBinding
 import com.graps.remindme.ui.base.BaseFragment
 import com.vivekkaushik.datepicker.OnDateSelectedListener
@@ -18,8 +18,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     override fun setupView() {
         binding.datePickerTimeline.apply {
-            setInitialDate(2021,11,24)
-            setOnDateSelectedListener(object : OnDateSelectedListener{
+            setInitialDate(2021, 11, 24)
+            setOnDateSelectedListener(object : OnDateSelectedListener {
                 override fun onDateSelected(year: Int, month: Int, day: Int, dayOfWeek: Int) {
                     viewModel.getDate(year, month, day)
                 }
