@@ -67,6 +67,7 @@
                     android:fontFamily="@font/podkova_extra_bold"
                     android:textColor="@color/blue_light"
                     android:textSize="@dimen/txt4"
+                    android:text="@{item.name}"
                     app:layout_constraintStart_toStartOf="@+id/dose"
                     app:layout_constraintTop_toTopOf="@+id/drugImg"
                     tools:text="Paracetamol" />
@@ -78,6 +79,7 @@
                     android:fontFamily="@font/podkova_bold"
                     android:textColor="@color/blue_light"
                     android:textSize="@dimen/txt4"
+                    android:text="@{(item.doseAmount)+ `once per day`}"
                     app:layout_constraintBottom_toTopOf="@+id/clock"
                     app:layout_constraintStart_toStartOf="@+id/doseTime"
                     app:layout_constraintTop_toBottomOf="@+id/drugName"

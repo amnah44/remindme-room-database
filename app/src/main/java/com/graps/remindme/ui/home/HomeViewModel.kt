@@ -25,5 +25,15 @@ class HomeViewModel : BaseViewModel() {
         )
     }
 
+    init {
+        insertTestData()
+    }
+
+    fun insertTestData(){
+        repository.insertReminder(
+            Reminder(0, "Paracetamol", 5, "2021", "11", "26")
+        )
+    }
+
 
 }

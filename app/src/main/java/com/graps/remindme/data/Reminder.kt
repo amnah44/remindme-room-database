@@ -13,5 +13,5 @@ data class Reminder(
     @ColumnInfo(name = "Year") val year: String?,
     @ColumnInfo(name = "Month") val month: String?,
     @ColumnInfo(name = "Day") val day: String?,
-    val image: Image?
+   // val image: Image?
 )
