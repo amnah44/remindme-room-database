@@ -11,10 +11,6 @@ class HomeViewModel : BaseViewModel() {
 
     val data = MutableLiveData<List<Reminder>>()
 
-//    private val _reminders = MutableLiveData<Reminder>()
-//    val reminders: LiveData<Reminder>
-//            get()= _reminders
-
     fun getDate(year: Int, month: Int, day: Int) {
         data.postValue(
             repository.retrieveRemindersDependingOnDate(
