@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.RemindMe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/blue_light</item>
+        <item name="colorPrimaryVariant">@color/blue_light</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -15,8 +15,8 @@
     </style>
 
     <style name="date_picker_style" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <item name="android:textColorPrimaryInverse">@color/app_txt_color</item>
-        <item name="android:colorControlActivated">@color/app_txt_color</item>
+        <item name="android:textColorPrimaryInverse">@color/blue_light</item>
+        <item name="android:colorControlActivated">@color/blue_light</item>
     </style>
 
 </resources>
