@@ -10,4 +10,10 @@
     <string name="phone">Phone</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="done">Done</string>
+    <string name="spray">Spray</string>
+    <string name="capsule">Capsule</string>
+    <string name="injection">Injection</string>
+    <string name="appearance">Appearance</string>
+    <string name="tablets">Tablets</string>
 </resources>
