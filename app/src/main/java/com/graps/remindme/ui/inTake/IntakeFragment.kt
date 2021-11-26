@@ -3,6 +3,7 @@ package com.graps.remindme.ui.inTake
 import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -17,6 +18,7 @@ class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_int
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentIntakeBinding =
         DataBindingUtil::inflate
 
+    lateinit var medicType: String
     override fun setupView() {
         binding.datePickerButton.setOnClickListener{
             val datePickerBuilder = MaterialDatePicker.Builder.datePicker().also {
@@ -45,6 +47,28 @@ class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_int
             }
             timePicker.show(requireActivity().supportFragmentManager,"Calendar")
             datePicker.show(requireActivity().supportFragmentManager,"Calendar")
+        }
+        binding.let {
+            it.capsule.setOnClickListener {
+                medicType = binding.capsuleText.text.toString()
+                Toast.makeText(requireContext(),"Medic set to $medicType",Toast.LENGTH_SHORT)
+                    .show()
+            }
+            it.injection.setOnClickListener{
+                medicType = binding.injectionText.text.toString()
+                Toast.makeText(requireContext(),"Medic set to $medicType",Toast.LENGTH_SHORT)
+                    .show()
+            }
+            it.tablets.setOnClickListener{
+                medicType = binding.tabletText.text.toString()
+                Toast.makeText(requireContext(),"Medic set to $medicType",Toast.LENGTH_SHORT)
+                    .show()
+            }
+            it.spray.setOnClickListener {
+                medicType = binding.sprayText.text.toString()
+                Toast.makeText(requireContext(),"Medic set to $medicType",Toast.LENGTH_SHORT)
+                    .show()
+            }
         }
     }
 }
