@@ -154,14 +154,15 @@
             android:padding="10dp"
             app:layout_constraintStart_toStartOf="@+id/frequency"
             app:layout_constraintTop_toBottomOf="@+id/lbl5"
-            app:layout_constraintWidth_percent="0.75" />
+            app:layout_constraintWidth_percent="0.75"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/date_picker_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:text="+"
-            android:textSize="@dimen/txt6"
+            android:textSize="@dimen/txt4"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/frequency"
             app:layout_constraintTop_toTopOf="@+id/reminder"

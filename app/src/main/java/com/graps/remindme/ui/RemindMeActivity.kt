@@ -13,5 +13,7 @@ class RemindMeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_remind_me)
 
+        ReminderDatabase.getInstance(applicationContext)
+
     }
 }
