@@ -1,6 +1,7 @@
 package com.graps.remindme.ui.inTake
 
 import android.content.DialogInterface
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -33,9 +34,9 @@ class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_int
                 val currentCalendar = "${calendar.get(Calendar.DAY_OF_MONTH)}/${calendar.get(Calendar.MONTH)}/${calendar.get(Calendar.YEAR)}"
                 binding.reminder.setText(currentCalendar)
 
-                viewModel.day.postValue(Calendar.DAY_OF_MONTH.toString())
-                viewModel.month.postValue(Calendar.MONTH.toString())
-                viewModel.year.postValue(Calendar.YEAR.toString())
+                viewModel.day.postValue(calendar.get(Calendar.DAY_OF_MONTH).toString())
+                viewModel.month.postValue(calendar.get(Calendar.MONTH).toString())
+                viewModel.year.postValue(calendar.get(Calendar.YEAR).toString())
             }
 
             timePicker.addOnPositiveButtonClickListener{
