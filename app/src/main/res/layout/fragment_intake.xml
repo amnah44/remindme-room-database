@@ -77,7 +77,8 @@
             app:layout_constraintStart_toStartOf="@+id/lbl2"
             app:layout_constraintTop_toBottomOf="@+id/lbl2"
             app:layout_constraintWidth_percent="0.43"
-            android:text="@={`` + viewModel.amount}"/>
+            android:text="@={`` + viewModel.amount}"
+            />
 
         <TextView
             android:id="@+id/lbl3"
