@@ -12,6 +12,7 @@ class IntakeViewModel: BaseViewModel() {
 
     val  pillsName = MutableLiveData<String>()
     val  amount = MutableLiveData<Int>()
+
     val  dose = MutableLiveData<String>()
     val  year = MutableLiveData<String>()
     val  month = MutableLiveData<String>()
@@ -22,12 +23,15 @@ class IntakeViewModel: BaseViewModel() {
 
     private val  repository = ReminderRepository()
 
+    init {
+        amount.postValue(1)
+    }
     fun addReminder()
     {
         pillsName.value.let {
             repository.insertReminder(Reminder(id = 0, name = it,amount.value,dose.value,year = year.value, month.value, day = day.value,frequency.value,"1",phoneNo.value))
-                .subscribeOn(Scheduler.io)
-                .subscribe()
+                ?.subscribeOn(Schedulers.io())
+                ?.subscribe()
         }
     }
 }
