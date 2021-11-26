@@ -32,6 +32,10 @@ class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_int
                 calendar.time = Date(it)
                 val currentCalendar = "${calendar.get(Calendar.DAY_OF_MONTH)}/${calendar.get(Calendar.MONTH)}/${calendar.get(Calendar.YEAR)}"
                 binding.reminder.setText(currentCalendar)
+
+                viewModel.day.postValue(Calendar.DAY_OF_MONTH.toString())
+                viewModel.month.postValue(Calendar.MONTH.toString())
+                viewModel.year.postValue(Calendar.YEAR.toString())
             }
 
             timePicker.addOnPositiveButtonClickListener{
