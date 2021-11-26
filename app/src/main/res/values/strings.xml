@@ -16,4 +16,6 @@
     <string name="injection">Injection</string>
     <string name="appearance">Appearance</string>
     <string name="tablets">Tablets</string>
+    <string name="to_take">To take</string>
+    <string name="add_button">Add button</string>
 </resources>
