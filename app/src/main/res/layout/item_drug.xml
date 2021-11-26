@@ -9,7 +9,6 @@
             name="item"
             type="com.graps.remindme.data.Reminder" />
 
-
     </data>
 
 
@@ -21,7 +20,8 @@
         android:layout_marginEnd="@dimen/medium_margin"
         android:layout_marginBottom="@dimen/small_margin"
         app:cardBackgroundColor="@color/app_color"
-        app:cardCornerRadius="16dp"
+        app:cardElevation="@dimen/small_margin"
+        app:cardCornerRadius="@dimen/medium_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">

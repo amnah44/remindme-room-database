@@ -70,7 +70,8 @@
             android:padding="10dp"
             app:layout_constraintStart_toStartOf="@+id/lbl2"
             app:layout_constraintTop_toBottomOf="@+id/lbl2"
-            app:layout_constraintWidth_percent="0.43" />
+            app:layout_constraintWidth_percent="0.43"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/lbl3"
@@ -93,7 +94,8 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="@+id/pillsName"
             app:layout_constraintTop_toBottomOf="@+id/lbl2"
-            app:layout_constraintWidth_percent="0.43" />
+            app:layout_constraintWidth_percent="0.43"
+            tools:ignore="SpeakableTextPresentCheck" />
 
 
         <TextView
@@ -119,7 +121,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl4"
-            app:layout_constraintWidth_percent="0.9" />
+            app:layout_constraintWidth_percent="0.9"
+            tools:ignore="SpeakableTextPresentCheck" />
 
 
         <TextView
@@ -144,14 +147,15 @@
             android:padding="10dp"
             app:layout_constraintStart_toStartOf="@+id/frequency"
             app:layout_constraintTop_toBottomOf="@+id/lbl5"
-            app:layout_constraintWidth_percent="0.75" />
+            app:layout_constraintWidth_percent="0.75"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/date_picker_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:text="+"
-            android:textSize="@dimen/txt6"
+            android:textSize="@dimen/txt4"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/frequency"
             app:layout_constraintTop_toTopOf="@+id/reminder"
@@ -180,7 +184,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl6"
-            app:layout_constraintWidth_percent="0.9" />
+            app:layout_constraintWidth_percent="0.9"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/lbl7"
