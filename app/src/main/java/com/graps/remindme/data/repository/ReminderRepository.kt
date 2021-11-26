@@ -2,12 +2,13 @@ package com.graps.remindme.data.repository
 
 import com.graps.remindme.data.Reminder
 import com.graps.remindme.data.database.ReminderDatabase
+import io.reactivex.rxjava3.core.Completable
 
 class ReminderRepository {
     val dao = ReminderDatabase.getInstanceWithoutContext()?.reminderDao()
 
-    fun insertReminder(reminder: Reminder) =
-        dao?.insertReminder(reminder)
+    fun insertReminder(reminder: Reminder) : Completable =
+        dao!!.insertReminder(reminder)
 
     fun deleteReminder(reminder: Reminder) =
         dao?.deleteReminder(reminder)
