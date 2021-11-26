@@ -207,17 +207,19 @@
             app:layout_constraintTop_toBottomOf="@+id/lbl7" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cardView"
+            android:id="@+id/tablets"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="0dp"
             android:background="@drawable/circle_view"
             app:cardBackgroundColor="@color/app_color"
             app:cardCornerRadius="50dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintDimensionRatio="H,50:50"
             app:layout_constraintStart_toStartOf="@+id/lbl8"
             app:layout_constraintTop_toBottomOf="@+id/lbl8"
-            app:layout_constraintTop_toTopOf="@+id/cardView1"
+            app:layout_constraintTop_toTopOf="@+id/spray"
             app:layout_constraintWidth_percent="0.21">
 
             <ImageView
@@ -247,11 +249,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cardView1"
+            android:id="@+id/spray"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="21dp"
             android:layout_marginTop="@dimen/medium_margin"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:background="@drawable/circle_view"
             app:cardBackgroundColor="@color/app_color"
             app:cardCornerRadius="50dp"
@@ -287,8 +291,10 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cardView3"
+            android:id="@+id/capsule"
             android:layout_width="0dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_height="0dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="@dimen/small_margin"
@@ -296,8 +302,8 @@
             app:cardBackgroundColor="@color/app_color"
             app:cardCornerRadius="50dp"
             app:layout_constraintDimensionRatio="H,50:50"
-            app:layout_constraintEnd_toStartOf="@+id/cardView1"
-            app:layout_constraintTop_toTopOf="@+id/cardView1"
+            app:layout_constraintEnd_toStartOf="@+id/spray"
+            app:layout_constraintTop_toTopOf="@+id/spray"
             app:layout_constraintWidth_percent="0.21">
 
             <ImageView
@@ -326,6 +332,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/injection"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="0dp"
@@ -333,9 +342,9 @@
             app:cardBackgroundColor="@color/app_color"
             app:cardCornerRadius="50dp"
             app:layout_constraintDimensionRatio="H,50:50"
-            app:layout_constraintEnd_toStartOf="@+id/cardView3"
-            app:layout_constraintStart_toEndOf="@+id/cardView"
-            app:layout_constraintTop_toTopOf="@+id/cardView1"
+            app:layout_constraintEnd_toStartOf="@+id/capsule"
+            app:layout_constraintStart_toEndOf="@+id/tablets"
+            app:layout_constraintTop_toTopOf="@+id/spray"
             app:layout_constraintWidth_percent="0.21">
 
             <ImageView
@@ -374,7 +383,7 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/phone"
             app:layout_constraintStart_toStartOf="@+id/phone"
-            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+            app:layout_constraintTop_toBottomOf="@+id/tablets" />
 
         <ImageView
             android:id="@+id/imageView2"
