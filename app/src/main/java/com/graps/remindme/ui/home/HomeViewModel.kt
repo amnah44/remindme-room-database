@@ -26,6 +26,7 @@ class HomeViewModel : BaseViewModel() {
 
         )
     }
+
     fun onSuccess(reminderList: List<Reminder>){
         data.postValue(reminderList)
     }
@@ -33,5 +34,4 @@ class HomeViewModel : BaseViewModel() {
     fun onError(t: Throwable){
         Log.v("ERROR", t.message.toString())
     }
-
 }
