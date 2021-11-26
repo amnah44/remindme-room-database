@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/podkova_bold"
-                android:text="@{(item.doseAmount)+ `once per day`}"
+                android:text="@{(item.dose)+ `once per day`}"
                 android:textColor="@color/blue_light"
                 android:textSize="@dimen/txt4"
                 app:layout_constraintStart_toStartOf="@+id/drugName"
