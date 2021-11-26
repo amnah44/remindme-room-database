@@ -17,12 +17,12 @@ abstract class BaseViewModel : ViewModel() {
 
     fun <T> observe(
         observable: Observable<T>,
-        onComplete: (T) -> Unit,
+        onSuccess: (T) -> Unit,
         onError: (Throwable) -> Unit
     ) {
         observable
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(onComplete, onError).add(disposable)
+            .subscribe(onSuccess, onError).add(disposable)
     }
 }
