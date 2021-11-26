@@ -24,5 +24,5 @@ interface ReminderDao {
         year: String,
         month: String,
         day: String,
-    ): List<Reminder>
+    ): Observable<List<Reminder>>
 }

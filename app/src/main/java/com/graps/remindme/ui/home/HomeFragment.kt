@@ -22,20 +22,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) ,
     FragmentHomeBinding = DataBindingUtil::inflate
 
     override fun setupView() {
-        val repository = ReminderRepository()
 
         binding.datePickerTimeline.apply {
             setInitialDate(2021, 11, 24)
             setOnDateSelectedListener(object : OnDateSelectedListener {
                 override fun onDateSelected(year: Int, month: Int, day: Int, dayOfWeek: Int) {
                     viewModel.getDate(year, month,day)
-                    binding.reminderRecycler.adapter = ReminderAdapter(listOf(
-                        Reminder(1, "grabs", 3,year.toString(),month.toString(),day.toString()),
-                        Reminder(1, "grabs", 3,year.toString(),month.toString(),day.toString()),
-                        Reminder(1, "grabs", 3,year.toString(),month.toString(),day.toString())
-                    ), object : ReminderInteractionListener{
 
-                    })
                 }
 
                 override fun onDisabledDateSelected(
@@ -53,6 +46,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) ,
             val dates: Array<Date> = arrayOf<Date>(Calendar.getInstance().time)
             binding.datePickerTimeline.deactivateDates(dates)
         }
+
+        binding.reminderRecycler.adapter = ReminderAdapter(mutableListOf(),
+        object : ReminderInteractionListener{
+        })
+
         binding.addFab.setOnClickListener(this)
     }
 
