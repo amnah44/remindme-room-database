@@ -3,6 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.graps.remindme.ui.inTake.IntakeViewModel" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -45,7 +50,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl1"
             app:layout_constraintWidth_percent="0.9"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            android:text="@={viewModel.pillsName}"/>
 
 
         <TextView
@@ -70,7 +76,8 @@
             android:padding="10dp"
             app:layout_constraintStart_toStartOf="@+id/lbl2"
             app:layout_constraintTop_toBottomOf="@+id/lbl2"
-            app:layout_constraintWidth_percent="0.43" />
+            app:layout_constraintWidth_percent="0.43"
+            android:text="@={`` + viewModel.amount}"/>
 
         <TextView
             android:id="@+id/lbl3"
@@ -93,7 +100,8 @@
             android:padding="10dp"
             app:layout_constraintEnd_toEndOf="@+id/pillsName"
             app:layout_constraintTop_toBottomOf="@+id/lbl2"
-            app:layout_constraintWidth_percent="0.43" />
+            app:layout_constraintWidth_percent="0.43"
+            android:text="@={viewModel.dose}"/>
 
 
         <TextView
@@ -119,7 +127,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl4"
-            app:layout_constraintWidth_percent="0.9" />
+            app:layout_constraintWidth_percent="0.9"
+            android:text="@={viewModel.frequency}"/>
 
 
         <TextView
@@ -180,7 +189,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl6"
-            app:layout_constraintWidth_percent="0.9" />
+            app:layout_constraintWidth_percent="0.9"
+            android:text="@={viewModel.phoneNo}"/>
 
         <TextView
             android:id="@+id/lbl7"
@@ -374,7 +384,8 @@
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/phone"
             app:layout_constraintStart_toStartOf="@+id/phone"
-            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            android:onClick="@{()->viewModel.addReminder()}"/>
 
         <ImageView
             android:id="@+id/imageView2"
