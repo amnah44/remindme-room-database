@@ -30,7 +30,7 @@ class IntakeViewModel: BaseViewModel() {
     {
         pillsName.value.let {
             repository.insertReminder(Reminder(id = 0, name = it,amount.value,dose.value,year = year.value, month.value, day = day.value,frequency.value,"1",phoneNo.value))
-                ?.subscribeOn(Schedulers.io())
+                ?.subscribeOn(io())
                 ?.subscribe()
         }
     }
