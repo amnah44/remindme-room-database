@@ -1,6 +1,7 @@
 package com.graps.remindme.ui.home
 
-import androidx.lifecycle.LiveData
+import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.graps.remindme.data.Reminder
 import com.graps.remindme.data.repository.ReminderRepository
@@ -23,17 +24,7 @@ class HomeViewModel : BaseViewModel() {
                 day.toString()
             )
         )
+       Log.i("Amnah", "Y:$year M:$month D:$day")
     }
-
-    init {
-        insertTestData()
-    }
-
-    fun insertTestData(){
-        repository.insertReminder(
-            Reminder(0, "Paracetamol", 5, "2021", "11", "26")
-        )
-    }
-
 
 }

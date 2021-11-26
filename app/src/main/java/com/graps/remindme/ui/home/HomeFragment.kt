@@ -1,5 +1,6 @@
 package com.graps.remindme.ui.home
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +8,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.graps.remindme.R
+import com.graps.remindme.data.Reminder
 import com.graps.remindme.data.database.ReminderDatabase
+import com.graps.remindme.data.repository.ReminderRepository
 import com.graps.remindme.databinding.FragmentHomeBinding
 import com.graps.remindme.ui.base.BaseFragment
 import com.vivekkaushik.datepicker.OnDateSelectedListener
@@ -19,11 +22,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) ,
     FragmentHomeBinding = DataBindingUtil::inflate
 
     override fun setupView() {
+        val repository = ReminderRepository()
+
         binding.datePickerTimeline.apply {
             setInitialDate(2021, 11, 24)
             setOnDateSelectedListener(object : OnDateSelectedListener {
                 override fun onDateSelected(year: Int, month: Int, day: Int, dayOfWeek: Int) {
-                    viewModel.getDate(year, month, day)
+                    viewModel.getDate(year, month,day)
+                    binding.reminderRecycler.adapter = ReminderAdapter(listOf(
+                        Reminder(1, "grabs", 3,year.toString(),month.toString(),day.toString()),
+                        Reminder(1, "grabs", 3,year.toString(),month.toString(),day.toString()),
+                        Reminder(1, "grabs", 3,year.toString(),month.toString(),day.toString())
+                    ), object : ReminderInteractionListener{
+
+                    })
                 }
 
                 override fun onDisabledDateSelected(
