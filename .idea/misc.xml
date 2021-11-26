@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/remindme-room-database-new/app/src/main/res/drawable/rounded_corner_btn.xml" value="0.2864583333333333" />
         <entry key="..\:/remindme-room-database-new/app/src/main/res/layout/fragment_home.xml" value="0.4" />
+        <entry key="..\:/remindme-room-database-new/app/src/main/res/layout/fragment_intake.xml" value="0.45091225021720244" />
         <entry key="..\:/remindme-room-database-new/app/src/main/res/layout/item_drug.xml" value="0.536" />
       </map>
     </option>
