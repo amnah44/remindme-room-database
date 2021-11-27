@@ -219,7 +219,7 @@
             app:layout_constraintTop_toBottomOf="@+id/lbl7" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cardView"
+            android:id="@+id/Tablets_cardView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="0dp"

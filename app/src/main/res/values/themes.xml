@@ -36,4 +36,9 @@
         <item name="android:background">@drawable/rounded_corner_view</item>
         <item name="cardBackgroundColor">@color/app_color</item>
     </style>
+
+    <style name="splashScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_pills_splash_screen</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
 </resources>

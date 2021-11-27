@@ -12,6 +12,7 @@ class RemindMeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.splashScreenTheme)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_remind_me)
         ReminderDatabase.getInstance(applicationContext)
     }
