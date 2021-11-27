@@ -74,6 +74,7 @@
             android:drawableStart="@drawable/ic_capsule"
             android:fontFamily="@font/podkova_regular"
             android:padding="10dp"
+            android:inputType="number"
             app:layout_constraintStart_toStartOf="@+id/lbl2"
             app:layout_constraintTop_toBottomOf="@+id/lbl2"
             app:layout_constraintWidth_percent="0.43"
@@ -96,6 +97,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             style="@style/editTextStyle"
+            android:inputType="number"
             android:drawableStart="@drawable/ic_capsule"
             android:fontFamily="@font/podkova_regular"
             android:padding="10dp"
@@ -125,6 +127,7 @@
             android:drawableStart="@drawable/ic_calender"
             android:fontFamily="@font/podkova_regular"
             android:padding="10dp"
+            android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl4"
@@ -182,17 +185,19 @@
 
         <EditText
             android:id="@+id/phone"
+            style="@style/editTextStyle"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            style="@style/editTextStyle"
             android:drawableStart="@drawable/ic_phone"
             android:fontFamily="@font/podkova_regular"
             android:padding="10dp"
+            android:inputType="number"
+            android:text="@={viewModel.phoneNo}"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl6"
-            app:layout_constraintWidth_percent="0.9"
-            android:text="@={viewModel.phoneNo}"/>
+            app:layout_constraintWidth_percent="0.9" />
 
         <TextView
             android:id="@+id/lbl7"
