@@ -48,6 +48,12 @@ class IntakeViewModel: BaseViewModel() {
             )
                 ?.subscribeOn(io())
                 ?.subscribe(::onSuccess,::onError)
+            amount.postValue(1)
+            dose.postValue("")
+            year.postValue("")
+            frequency.postValue("")
+            phoneNo.postValue("")
+            pillsName.postValue("")
         }
     }
 
