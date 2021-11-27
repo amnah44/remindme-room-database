@@ -1,11 +1,11 @@
 package com.graps.remindme.ui.inTake
 
-import android.content.DialogInterface
-import android.util.Log
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.graps.remindme.R
@@ -50,6 +50,10 @@ class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_int
             }
             timePicker.show(requireActivity().supportFragmentManager,"Calendar")
             datePicker.show(requireActivity().supportFragmentManager,"Calendar")
+        }
+        binding.done.setOnClickListener{ view->
+            viewModel.addReminder()
+           view.findNavController().popBackStack()
         }
     }
 }
