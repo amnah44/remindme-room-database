@@ -102,7 +102,7 @@
             app:layout_constraintEnd_toEndOf="@+id/pillsName"
             app:layout_constraintTop_toBottomOf="@+id/lbl2"
             app:layout_constraintWidth_percent="0.43"
-            android:text="@={viewModel.dose}"/>
+            android:text="@={viewModel.dose }"/>
 
 
         <TextView

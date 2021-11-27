@@ -31,6 +31,7 @@ class IntakeViewModel: BaseViewModel(),BaseAdapter.BaseInteractionListener {
 
     init {
         amount.value=1
+        dose.value = "mg"
     }
     fun addReminder()
     {
@@ -38,7 +39,7 @@ class IntakeViewModel: BaseViewModel(),BaseAdapter.BaseInteractionListener {
             repository.insertReminder(Reminder(id = null,
                 name = it,
                 amount.value,
-                dose.value,
+                dose.value+"mg",
                 year = year.value,
                 month.value,
                 day = day.value,
