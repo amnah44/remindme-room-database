@@ -8,7 +8,6 @@ import com.graps.remindme.data.Reminder
 
 @Database(entities = [Reminder::class], version = 1)
 abstract class ReminderDatabase : RoomDatabase() {
-
     abstract fun reminderDao(): ReminderDao
 
     companion object {

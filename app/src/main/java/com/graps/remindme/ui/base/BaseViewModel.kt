@@ -15,9 +15,9 @@ abstract class BaseViewModel : ViewModel() {
         disposable.dispose()
     }
 
-    fun <T> observe(
-        observable: Observable<T>,
-        onSuccess: (T) -> Unit,
+    fun <Any> observe(
+        observable: Observable<Any>,
+        onSuccess: (Any) -> Unit,
         onError: (Throwable) -> Unit
     ) {
         observable

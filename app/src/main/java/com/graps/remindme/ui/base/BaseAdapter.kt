@@ -34,7 +34,6 @@ abstract class BaseAdapter<T>(
                 //holder.binding.setVariable(BR.listener, listener)
             }
         }
-
     }
 
     override fun getItemCount() = items.size

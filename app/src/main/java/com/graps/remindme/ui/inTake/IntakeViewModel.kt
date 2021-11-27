@@ -1,18 +1,12 @@
 package com.graps.remindme.ui.inTake
 
-import android.app.Activity
-import android.content.Context
-import android.util.Log
-import android.widget.Toast
+
 import androidx.lifecycle.MutableLiveData
-import com.google.android.material.internal.ContextUtils.getActivity
 import com.graps.remindme.data.Reminder
 import com.graps.remindme.data.repository.ReminderRepository
 import com.graps.remindme.ui.base.BaseViewModel
-import io.reactivex.rxjava3.core.Scheduler
-import io.reactivex.rxjava3.schedulers.Schedulers
 import io.reactivex.rxjava3.schedulers.Schedulers.io
-import kotlin.coroutines.coroutineContext
+
 
 class IntakeViewModel: BaseViewModel() {
 
@@ -25,7 +19,7 @@ class IntakeViewModel: BaseViewModel() {
     val  day = MutableLiveData<String>()
     val  frequency = MutableLiveData<String>()
     val  phoneNo = MutableLiveData<String>()
-    val  image = MutableLiveData<String>()
+    //val  image = MutableLiveData<String>()
 
     private val  repository = ReminderRepository()
 
@@ -45,9 +39,8 @@ class IntakeViewModel: BaseViewModel() {
                 frequency.value,
                 "1",
                 phoneNo.value)
-            )
-                ?.subscribeOn(io())
-                ?.subscribe(::onSuccess,::onError)
+            ).subscribeOn(io()).subscribe(::onSuccess,::onError)
+
             amount.postValue(1)
             dose.postValue("")
             year.postValue("")

@@ -5,10 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import com.graps.remindme.data.Reminder
 import com.graps.remindme.data.repository.ReminderRepository
 import com.graps.remindme.ui.base.BaseViewModel
-import io.reactivex.rxjava3.schedulers.Schedulers
 
 class HomeViewModel : BaseViewModel() {
-    val repository = ReminderRepository()
+    private val repository = ReminderRepository()
 
     val data = MutableLiveData<List<Reminder>>()
 
@@ -21,15 +20,14 @@ class HomeViewModel : BaseViewModel() {
         ),
             ::onSuccess,
             ::onError
-
         )
     }
 
-    fun onSuccess(reminderList: List<Reminder>){
+    private fun onSuccess(reminderList: List<Reminder>){
         data.postValue(reminderList)
     }
 
-    fun onError(t: Throwable){
+    private fun onError(t: Throwable){
         Log.v("ERROR", t.message.toString())
     }
 }

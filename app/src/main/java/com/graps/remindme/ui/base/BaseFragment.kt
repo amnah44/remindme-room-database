@@ -30,7 +30,6 @@ abstract class BaseFragment<VDB : ViewDataBinding>(private val fragmentLayoutId:
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupView()
     }
 

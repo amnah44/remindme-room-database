@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
@@ -46,8 +45,7 @@ class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_int
                 val currentMinute = "${Calendar.MINUTE}"
                 val currentSecond = "${Calendar.SECOND}"
                 val currentTime =
-                    binding.reminder.text.toString() + ", $currentHour" + ":"+
-                            "$currentMinute" + ":" + "$currentSecond"
+                    binding.reminder.text.toString() + ", $currentHour" + ":"+ currentMinute + ":" + currentSecond
                 binding.reminder.setText(currentTime)
             }
             timePicker.show(requireActivity().supportFragmentManager,"Calendar")

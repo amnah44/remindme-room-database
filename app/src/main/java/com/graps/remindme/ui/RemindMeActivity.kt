@@ -9,11 +9,10 @@ import com.graps.remindme.databinding.ActivityRemindMeBinding
 
 class RemindMeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRemindMeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_remind_me)
-
         ReminderDatabase.getInstance(applicationContext)
-
     }
 }
