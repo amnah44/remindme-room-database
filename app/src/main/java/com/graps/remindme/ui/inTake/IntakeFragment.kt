@@ -2,10 +2,12 @@ package com.graps.remindme.ui.inTake
 
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.graps.remindme.R
@@ -13,7 +15,7 @@ import com.graps.remindme.databinding.FragmentIntakeBinding
 import com.graps.remindme.ui.base.BaseFragment
 import java.util.*
 
-class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_intake) {
+class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_intake), View.OnClickListener {
     override val viewModel by activityViewModels<IntakeViewModel>()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentIntakeBinding =
         DataBindingUtil::inflate
@@ -51,9 +53,11 @@ class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_int
             timePicker.show(requireActivity().supportFragmentManager,"Calendar")
             datePicker.show(requireActivity().supportFragmentManager,"Calendar")
         }
-        binding.done.setOnClickListener{ view->
-            viewModel.addReminder()
-           view.findNavController().popBackStack()
-        }
+        binding.done.setOnClickListener(this)
+    }
+
+    override fun onClick(v: View?) {
+        this.viewModel.addReminder()
+        findNavController().popBackStack()
     }
 }
