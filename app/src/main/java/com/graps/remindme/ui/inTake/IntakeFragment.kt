@@ -53,6 +53,12 @@ class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_int
         }
         binding.done.setOnClickListener{ view->
             viewModel.addReminder()
+            viewModel.amount.postValue(1)
+            viewModel.dose.postValue("")
+            viewModel.year.postValue("")
+            viewModel.frequency.postValue("")
+            viewModel.phoneNo.postValue("")
+            viewModel.pillsName.postValue("")
            view.findNavController().popBackStack()
         }
     }
