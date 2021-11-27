@@ -16,5 +16,5 @@ class ReminderRepository {
         dao.updateReminder(reminder)
 
     fun retrieveRemindersDependingOnDate(year: String, month: String, day: String) =
-        dao.getFilteredReminders(year, month, day)
+        dao.getRemindersForADate(year, month, day)
 }
