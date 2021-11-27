@@ -27,9 +27,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home),
 
     val getDate = DateAndTimeSource()
 
-
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun setupView() {
+
+        with(viewModel) {
+            getRemindersDependingOnDate(
+                getDate.getLocalDate().year,
+                getDate.getLocalDate().month.value - 1,
+                getDate.getLocalDate().dayOfMonth
+            )
+        }
+
         binding.datePickerTimeline.apply {
+
+            setActiveDate(getDate.getLocalCalendar())
             setInitialDate(2021, 10, 24)
             setOnDateSelectedListener(object : OnDateSelectedListener {
                 override fun onDateSelected(year: Int, month: Int, day: Int, dayOfWeek: Int) {
