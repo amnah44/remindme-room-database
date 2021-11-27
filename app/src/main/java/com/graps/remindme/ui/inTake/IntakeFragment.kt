@@ -12,6 +12,7 @@ import com.google.android.material.timepicker.MaterialTimePicker
 import com.graps.remindme.R
 import com.graps.remindme.databinding.FragmentIntakeBinding
 import com.graps.remindme.ui.base.BaseFragment
+import com.graps.remindme.util.AppearanceList
 import java.util.*
 
 class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_intake), View.OnClickListener {
@@ -20,6 +21,10 @@ class IntakeFragment : BaseFragment<FragmentIntakeBinding>(R.layout.fragment_int
         DataBindingUtil::inflate
 
     override fun setupView() {
+
+        binding.recyclerAppearance.adapter =AppearanceAdapter(AppearanceList().appearanceList,viewModel)
+
+
         binding.datePickerButton.setOnClickListener{
             val datePickerBuilder = MaterialDatePicker.Builder.datePicker().also {
                 it.setTitleText("Set Date")

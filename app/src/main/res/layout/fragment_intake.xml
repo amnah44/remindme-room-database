@@ -218,171 +218,35 @@
             app:layout_constraintStart_toStartOf="@+id/pillsName"
             app:layout_constraintTop_toBottomOf="@+id/lbl7" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cardView"
-            android:layout_width="0dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_appearance"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="0dp"
-            style="@style/circleViewStyle"
-            app:cardCornerRadius="50dp"
-            app:layout_constraintDimensionRatio="H,50:50"
-            app:layout_constraintStart_toStartOf="@+id/lbl8"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lbl8"
-            app:layout_constraintTop_toTopOf="@+id/cardView1"
-            app:layout_constraintWidth_percent="0.21">
+            tools:listitem="@layout/item_appearance">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="@dimen/small_margin"
-                android:src="@drawable/ic_tablets"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="@dimen/small_margin"
-                android:fontFamily="@font/podkova_bold"
-                android:textAlignment="center"
-                android:textColor="@color/blue_light"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
-                android:text="@string/tablets" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cardView1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="21dp"
-            android:layout_marginTop="@dimen/medium_margin"
-            style="@style/circleViewStyle"
-            app:cardCornerRadius="50dp"
-            app:layout_constraintDimensionRatio="H,50:50"
-            app:layout_constraintEnd_toEndOf="@+id/phone"
-
-            app:layout_constraintTop_toBottomOf="@+id/lbl8"
-            app:layout_constraintWidth_percent="0.21">
-
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="@dimen/small_margin"
-                android:src="@drawable/ic_spray"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="@dimen/small_margin"
-                android:fontFamily="@font/podkova_bold"
-                android:text="@string/spray"
-                android:textAlignment="center"
-                android:textColor="@color/blue_light"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView1" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cardView3"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="@dimen/small_margin"
-            style="@style/circleViewStyle"
-            app:cardCornerRadius="50dp"
-            app:layout_constraintDimensionRatio="H,50:50"
-            app:layout_constraintEnd_toStartOf="@+id/cardView1"
-            app:layout_constraintTop_toTopOf="@+id/cardView1"
-            app:layout_constraintWidth_percent="0.21">
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="@dimen/small_margin"
-                android:src="@drawable/ic_capsule1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="@dimen/small_margin"
-                android:fontFamily="@font/podkova_bold"
-                android:text="@string/capsule"
-                android:textAlignment="center"
-                android:textColor="@color/blue_light"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="0dp"
-            style="@style/circleViewStyle"
-            app:cardCornerRadius="50dp"
-            app:layout_constraintDimensionRatio="H,50:50"
-            app:layout_constraintEnd_toStartOf="@+id/cardView3"
-            app:layout_constraintStart_toEndOf="@+id/cardView"
-            app:layout_constraintTop_toTopOf="@+id/cardView1"
-            app:layout_constraintWidth_percent="0.21">
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="@dimen/small_margin"
-                android:src="@drawable/ic_injection"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="@dimen/small_margin"
-                android:fontFamily="@font/podkova_bold"
-                android:text="@string/injection"
-                android:textAlignment="center"
-                android:textColor="@color/blue_light"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.recyclerview.widget.RecyclerView>
 
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/done"
             android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
             android:layout_marginTop="@dimen/medium_margin"
             android:background="@drawable/rounded_corner_btn"
             android:text="@string/done"
             android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/phone"
-            app:layout_constraintStart_toStartOf="@+id/phone"
-            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+            app:layout_constraintStart_toStartOf="@+id/phone" />
 
         <ImageView
             android:id="@+id/imageView2"

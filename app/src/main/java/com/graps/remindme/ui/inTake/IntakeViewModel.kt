@@ -1,14 +1,20 @@
 package com.graps.remindme.ui.inTake
 
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.graps.remindme.data.Reminder
 import com.graps.remindme.data.repository.ReminderRepository
+import com.graps.remindme.ui.base.BaseAdapter
 import com.graps.remindme.ui.base.BaseViewModel
+import com.graps.remindme.util.Appearance
+import com.graps.remindme.util.AppearanceList
 import io.reactivex.rxjava3.schedulers.Schedulers.io
 
 
-class IntakeViewModel: BaseViewModel() {
+class IntakeViewModel: BaseViewModel(),BaseAdapter.BaseInteractionListener {
+
+    val appearanceList =AppearanceList()
 
     val  pillsName = MutableLiveData<String>()
     val  amount = MutableLiveData<Int>()
@@ -37,10 +43,9 @@ class IntakeViewModel: BaseViewModel() {
                 month.value,
                 day = day.value,
                 frequency.value,
-                "1",
+                appearnceSomething().toString(),
                 phoneNo.value)
             ).subscribeOn(io()).subscribe(::onSuccess,::onError)
-
             amount.postValue(1)
             dose.postValue("")
             year.postValue("")
@@ -56,4 +61,9 @@ class IntakeViewModel: BaseViewModel() {
       println(e.message)
     }
 
+    fun appearnceSomething(): Int {
+        val list =AppearanceList().appearanceList
+        println(list[0])
+        return list[0].image
+    }
 }
