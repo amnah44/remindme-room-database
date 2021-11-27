@@ -13,4 +13,22 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="recyclerViewItemsColor">
+        <item name="cardBackgroundColor">@color/dark_gray</item>
+    </style>
+
+    <style name="intake_background">
+        <item name="android:background">@color/dark_gray</item>
+    </style>
+
+    <style name="circleViewStyle">
+        <item name="android:background">@drawable/circle_view_dark</item>
+        <item name="cardBackgroundColor">@color/dark_gray</item>
+    </style>
+
+    <style name="editTextStyle">
+        <item name="android:background">@drawable/rounded_corner_view_dark</item>
+        <item name="cardBackgroundColor">@color/dark_gray</item>
+    </style>
 </resources>
