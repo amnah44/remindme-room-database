@@ -15,7 +15,6 @@ import com.graps.remindme.ui.base.BaseFragment
 import com.vivekkaushik.datepicker.OnDateSelectedListener
 import java.util.*
 
-
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home),
     View.OnClickListener {
     override val viewModel by activityViewModels<HomeViewModel>()
