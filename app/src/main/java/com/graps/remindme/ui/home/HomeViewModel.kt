@@ -12,21 +12,22 @@ class HomeViewModel : BaseViewModel() {
     val data = MutableLiveData<List<Reminder>>()
 
     fun getRemindersDependingOnDate(year: Int, month: Int, day: Int) {
-        observe(repository.retrieveRemindersDependingOnDate(
-            year.toString(),
-            month.toString(),
-            day.toString()
-        ),
+        observe(
+            repository.retrieveRemindersDependingOnDate(
+                year.toString(),
+                month.toString(),
+                day.toString()
+            ),
             ::onSuccess,
             ::onError
         )
     }
 
-    private fun onSuccess(reminderList: List<Reminder>){
+    private fun onSuccess(reminderList: List<Reminder>) {
         data.postValue(reminderList)
     }
 
-    private fun onError(t: Throwable){
+    private fun onError(t: Throwable) {
         Log.v("ERROR", t.message.toString())
     }
 }

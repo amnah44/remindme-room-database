@@ -20,15 +20,15 @@
             android:id="@+id/datePickerTimeline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/small_margin"
             android:background="@color/blue_light"
+            android:padding="@dimen/small_margin"
             app:dateTextColor="@color/app_color"
             app:dayTextColor="@color/app_color"
             app:disabledColor="@color/grey"
-            app:monthTextColor="@color/app_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:monthTextColor="@color/app_color" />
 
         <TextView
             android:id="@+id/to_take_txt"
